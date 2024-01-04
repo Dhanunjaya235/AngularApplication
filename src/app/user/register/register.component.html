@@ -1,0 +1,95 @@
+<div class="form-container" *ngIf="!show">
+    <form *ngIf="registrationForm" [formGroup]="registrationForm" (ngSubmit)="onSubmit()" id="signup" ngNativeValidate>
+        <div>
+          
+          <label for="firstname">FirstName:</label>
+          <input type="text" id="firstname" name="name" required formControlName="firstName">
+          <div *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+            <div *ngIf="registrationForm.get('firstName')?.errors?.required">First Name is required.</div>
+          </div>
+        </div>
+        
+        <div>
+          
+          <label for="lastname">LastName:</label>
+          <input type="text" id="lastname" name="name" required formControlName="lastName">
+          <div *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+            <div *ngIf="registrationForm.get('lastName')?.errors?.required">Last Name is required.</div>
+          </div>
+          
+        </div>
+        <div>
+          
+          <label for="username">UserName:</label>
+          <input type="text" id="username" name="username" required formControlName="userName" [(ngModel)]="username" >
+          <div *ngIf="registrationForm.get('userName')?.invalid && (registrationForm.get('userName')?.dirty || registrationForm.get('userName')?.touched)">
+            <div *ngIf="registrationForm.get('userName')?.errors?.required">User Name is required.</div>
+          </div>
+          
+        </div>
+        <div>
+          <p>Gender:  <input type="radio" name="gender" value="male" formControlName="gender">Male  <input type="radio" name="gender" value="female" formControlName="gender">Female
+              <span *ngIf="registrationForm.get('gender')?.errors?.required">
+                        &nbsp;&nbsp; Gender Is Required
+                        
+              </span>
+            </p>
+          </div>
+        <div>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required formControlName="email">
+          <div *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+            <div *ngIf="registrationForm.get('email')?.errors?.required">Email is required.</div>
+            <div *ngIf="registrationForm.get('email')?.errors?.email">Email must be a valid email address.</div>
+          </div>
+        </div>
+        <div>
+          
+          <label for="mobile">Mobile Number:</label>
+          <input type="mobile" id="mobile" name="mobile" required formControlName="mobile">
+          <div *ngIf="registrationForm.get('mobile')?.invalid && (registrationForm.get('mobile')?.dirty || registrationForm.get('mobile')?.touched)">
+            <div *ngIf="registrationForm.get('mobile')?.errors?.required">Mobile Number is required.</div>
+            <div *ngIf="registrationForm.get('mobile')?.errors?.minlength">Mobile Number must be a valid number</div>
+            <div *ngIf="registrationForm.get('mobile')?.errors?.maxlength">Mobile Number must be a valid number with 10 digits</div>
+            <div *ngIf="registrationForm.get('mobile')?.errors?.pattern">Mobile number must contain only digits</div>
+          </div>
+          
+        </div>
+        
+        <div>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required formControlName="password">
+          <div *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
+            <div *ngIf="registrationForm.get('password')?.errors?.required">Password is required.</div>
+            <div *ngIf="registrationForm.get('password')?.errors?.minlength">Password must be at least 6 characters long.</div>
+          </div>
+        </div>
+        <div>
+          
+          <label for="confirm-password">Confirm Password:</label>
+      <input type="password"  id="confirm-password" name="confirm-password"  formControlName="confirmpassword">
+            <div *ngIf="registrationForm.get('confirmpassword')?.invalid && (registrationForm.get('confirmpassword')?.dirty || registrationForm.get('confirmpassword')?.touched)">
+              <div *ngIf="registrationForm.get('confirmpassword')?.errors?.required">Confirm Password is required.</div>
+              <div *ngIf="registrationForm.get('confirmpassword')?.errors?.minlength">Password must be at least 6 characters long.</div>
+              
+            </div>
+            <div *ngIf="registrationForm.hasError('passwordMismatch')">
+              Passwords do not match
+            </div>
+          </div>
+        <div>
+          <div class="button-container">
+            <button type="submit">Register</button>
+            <button type="reset" (click)="reset()">Reset</button>
+          </div>
+        </div>
+        </form>
+</div>
+
+<div *ngIf="show" id="registered">
+  <h1>
+    You have already logged in you cannot register again
+  </h1>
+</div>

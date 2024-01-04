@@ -1,0 +1,18 @@
+.home{
+    margin-left: 100px;
+}
+
+.home h1{
+    color:black;
+    position: relative;
+}
+
+.rain img{
+    background: inherit;
+}
+
+.sun{
+    margin-left: 870px;
+    background: inherit;
+    opacity: 0.5;
+}

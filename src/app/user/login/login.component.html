@@ -1,0 +1,21 @@
+<div class="login-container" *ngIf="!show">
+  <form  (ngSubmit)="submitDetails()" ngNativeValidate>
+    <div class="login-form" >
+      <h1>Login</h1>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required [(ngModel)]="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required [(ngModel)]="password">
+      </div>
+      <button type="submit" >Login</button>
+    </div>
+  </form>
+  </div>
+
+<div *ngIf="show">
+<h1 class="h1" >You are alreay logged in....</h1>
+<h1 class="h1">You can now use the application and navigate to what to want</h1>
+</div>

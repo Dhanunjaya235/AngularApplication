@@ -1,0 +1,26 @@
+<div id="air">
+    <p>Welcome To Wind Property Finder</p>
+    <h3>Select an option from the below dropdown or enter city in the input field to get the wind properties of the city</h3>
+<select [(ngModel)]="city" (ngModelChange)="weatherForecast()" name="cities">
+
+    <option value="hyderabad">Hyderabad</option>
+    <option value="chennai">Chennai</option>
+    <option value="visakhapatnam">Vizag</option>
+    <option value="vijayawada">Vijayawada </option>
+    <option value="bangalore" >Bangalore</option>
+    <option value="delhi">Delhi</option>
+    <option value="goa">Goa</option>
+    <option value="kolkata" >Kolkata</option>
+    <option value="mumbai" >Mumbai</option>
+</select>
+<p>Enter City : <input type="text" [(ngModel)]="city" placeholder="Enter city name"></p>
+<button (click)="weatherForecast()" class="air-button">Click Here for Result</button>
+
+<h1 *ngIf="show">The City is :  <span>{{city|uppercase}}</span></h1>
+
+<h3 *ngIf="show"> The speed of the wind in the   {{city}} is  <span appColor> {{speed}} m/sec  or {{speed | kilometer}} km/hour</span></h3>
+
+<h3 *ngIf="show"> The direction of the wind in the  {{city}} is  <span appColor>{{direction}} degrees</span></h3>
+
+
+</div>

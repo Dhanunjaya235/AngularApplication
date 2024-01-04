@@ -1,0 +1,8 @@
+body{
+    background-image: url('https://img.freepik.com/free-photo/lonely-meadow-with-sky-background_1160-299.jpg?w=740&t=st=1678082527~exp=1678083127~hmac=87c3b039d6ffe523d7f879d68da0cb477377fc6a144eb314ee95fda3a466ea31');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}

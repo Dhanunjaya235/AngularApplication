@@ -1,0 +1,146 @@
+.topnav {
+  background-image: linear-gradient(45deg, #4c2a76, #ff0080);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-style: normal;
+}
+
+.topnav a:hover {
+  background-image: linear-gradient(45deg, #2de016, #0e2db4);
+}
+
+#routes {
+  margin-top: 10%;
+  margin-left: 35%;
+  float: left;
+}
+
+
+
+#display {
+  display: flex;
+}
+
+#path {
+  margin-left: 250px;
+  text-align: center;
+  position: fixed;
+  background-color: transparent;
+}
+
+#logout {
+  background-color: inherit;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 12px;
+}
+
+#logout:hover {
+  background-color: coral;
+}
+
+#heading {
+  margin-left: 300px;
+  color: navy;
+}
+
+.sidebar {
+  position: fixed;
+  left: 9px;
+  width: 250px;
+  height: 92%;
+  background: linear-gradient(to bottom right, #ffa07a, #4169e1);
+  color: #fff;
+  overflow-y: auto;
+}
+
+.sidebar header {
+  padding: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  border-top: 1px solid #444;
+}
+
+.sidebar li:first-child {
+  border-top: none;
+}
+
+.sidebar a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: linear-gradient(to bottom right, #ff1493, #00bfff);
+}
+
+.sidebar i {
+  margin-right: 10px;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.content header {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+nav {
+  background-color: #333;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+.active{
+  background-image: url('https://img.freepik.com/free-photo/lonely-meadow-with-sky-background_1160-299.jpg?w=740&t=st=1678082527~exp=1678083127~hmac=87c3b039d6ffe523d7f879d68da0cb477377fc6a144eb314ee95fda3a466ea31');
+}

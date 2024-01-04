@@ -1,0 +1,25 @@
+<div class="topnav">
+  <a routerLink="/home">Home</a>
+  <a routerLink="/user/login" routerLinkActive="active">Login</a>
+  <a routerLink="/user/register" routerLinkActive="active">Register</a>
+  <a routerLink="/about" routerLinkActive="active">About</a>
+  <a routerLink="/user/profile" (click)="isLoggedIn()" routerLinkActive="active">Profile</a>
+  <a routerLink="/user/login" (click)="logout()">LogOut</a>
+
+</div>
+<div id="display">
+  <div class="sidebar">
+    <ul>
+      <li><a routerLink="/weather" (click)="isLoggedIn()" routerLinkActive="active">Weather Forecast</a></li>
+      <li><a routerLink="/coordinates" (click)="isLoggedIn()" routerLinkActive="active">Find Coordinates</a></li>
+      <li><a routerLink="/suntimings" (click)="isLoggedIn()" routerLinkActive="active">Sun-Timings</a></li>
+      <li><a routerLink="/aircondition" (click)="isLoggedIn()" routerLinkActive="active">Air Condition</a></li>
+      <li><a routerLink="/wind" (click)="isLoggedIn()" routerLinkActive="active">Wind Properties</a></li>
+    </ul>
+  </div>
+  <div id="path">
+   <router-outlet></router-outlet>
+  </div>
+</div>
+
+

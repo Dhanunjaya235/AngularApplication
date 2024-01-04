@@ -1,0 +1,25 @@
+<div class="background">
+    <div id="sun">
+        <p>Welcome To Sun Timings Finder</p>
+        <h3>Select an option from the below dropdown or enter the city in the input field to get the sun timings of the city</h3>
+    <select [(ngModel)]="city" (ngModelChange)="weatherForecast()" name="cities">
+    
+        <option value="hyderabad">Hyderabad</option>
+        <option value="chennai">Chennai</option>
+        <option value="visakhapatnam">Vizag</option>
+        <option value="vijayawada">Vijayawada </option>
+        <option value="bangalore" >Bangalore</option>
+        <option value="delhi">Delhi</option>
+        <option value="goa">Goa</option>
+        <option value="kolkata" >Kolkata</option>
+        <option value="mumbai" >Mumbai</option>
+    </select>
+    <p>Enter City : <input type="text" [(ngModel)]="city" placeholder="Enter city name"></p>
+    <button (click)="weatherForecast()" class="sun-button">Click Here for Result</button>
+    <h1 *ngIf="show">The City is :  <span>{{city|uppercase}}</span></h1>
+    
+    <h3 *ngIf="show"> The Sun rise time of the   {{city}} is  <span appColor>{{sunrise|date:'shortTime'}} </span></h3>
+    
+    <h3 *ngIf="show"> The sun set time  of the  {{city}} is  <span appColor>{{sunset|date:'shortTime'}} </span></h3>
+    </div>
+</div>

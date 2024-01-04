@@ -1,0 +1,22 @@
+#about{
+    margin-left: 200px;
+    overflow: auto;
+}
+
+#about ul{
+    list-style-type: none;
+}
+
+#about ul li{
+    padding: 20px;
+    color: chocolate;
+    font-size: large;
+}
+
+#about p{
+    color: darkgreen;
+}
+
+#about h3{
+    color: crimson;
+}
